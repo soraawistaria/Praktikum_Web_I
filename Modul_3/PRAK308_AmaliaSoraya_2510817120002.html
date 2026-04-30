@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            header {
+                margin: 0;
+                background-color: skyblue;
+                height: 25%;
+                text-align: center;
+                align-items: center;
+            }
+            form {
+                margin: 0;
+                background-color: gray;
+                padding: 10px;
+            } 
+            form h2 { font-family: Arial; font-size: 35;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 style="color: red; font-family: Arial;">Pendaftaran Kursus</h1>
+        </header>
+        <form>
+            <h2>Data Diri</h2>
+                Nama    <input type="text"> <br>
+                Nim     <input type="text"> <br>
+                E-mail  <input type="email"> <br>
+                Tanggal Lahir  <input type="date"> <br>
+                Jenis Kelamin 
+                <input type="radio"> Laki-laki <br> 
+                <input type="radio"> Perempuan <br>
+                Pilih Program Kursus <input type="checkbox"> C# <br>
+                <input type="checkbox"> Java <br>
+                <input type="checkbox"> SQL <br>
+                <input type="checkbox"> HTML dan PHP <br>
+                Pilihan Hari/Jam Kursus 
+                <select name="Jadwal">
+                    <option value="spagi">Senin - Rabu/09.00 - 11.00</option>
+                    <option value="spagi">Kamis - Sabtu/08.00 - 10.00</option>
+                </select>
+        </form>
+    </body>
+</html>
