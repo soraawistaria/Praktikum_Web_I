@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Form</title>
+        <title>Formulir Kursus</title>
         <style>
             body {
                 margin: 0;
@@ -10,38 +10,94 @@
                 background-color: skyblue;
                 height: 25%;
                 text-align: center;
-                align-items: center;
             }
-            form {
+            .atas {
+                padding: 10px;
+                padding-bottom: 30px;
+                background-color: skyblue;
+                border: 1px solid black;
+            }
+                .atas h1 {
+                    color: red;
+                    font-family: Arial;
+                    text-align: center;
+                }
+            .tengah {
                 margin: 0;
                 background-color: gray;
-                padding: 10px;
+                padding: 5px;
+                border: 1px solid black;
+                padding-bottom: 100px;
+                padding-top: 0px;
             } 
-            form h2 { font-family: Arial; font-size: 35;}
+            .tengah h2 { font-family: Arial; }
+            .bawah {
+                background-color: salmon;
+                padding: 5px;
+                border: 1px solid black;
+            }
+                .bawah textarea {
+                    width: 500px;
+                    height: 100px;
+                }
         </style>
     </head>
     <body>
-        <header>
-            <h1 style="color: red; font-family: Arial;">Pendaftaran Kursus</h1>
-        </header>
-        <form>
+        <div class="atas">
+            <h1>Pendaftaran Kursus</h1>
+        </div>
+        <div class="tengah">
             <h2>Data Diri</h2>
-                Nama    <input type="text"> <br>
-                Nim     <input type="text"> <br>
-                E-mail  <input type="email"> <br>
-                Tanggal Lahir  <input type="date"> <br>
-                Jenis Kelamin 
-                <input type="radio"> Laki-laki <br> 
-                <input type="radio"> Perempuan <br>
-                Pilih Program Kursus <input type="checkbox"> C# <br>
-                <input type="checkbox"> Java <br>
-                <input type="checkbox"> SQL <br>
-                <input type="checkbox"> HTML dan PHP <br>
-                Pilihan Hari/Jam Kursus 
-                <select name="Jadwal">
-                    <option value="spagi">Senin - Rabu/09.00 - 11.00</option>
-                    <option value="spagi">Kamis - Sabtu/08.00 - 10.00</option>
-                </select>
-        </form>
+            <table border="0">
+                <tr>
+                    <td style="width: 200px;">Nama</td>
+                    <td style="width: 200px;"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Nim</td>
+                    <td><input type="text" maxlength="12"></td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">Jenis Kelamin</td>
+                    <td>
+                        <input type="radio"> Laki-laki <br>
+                        <input type="radio"> Perempuan
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">Pilih Program Kursus</td>
+                    <td>
+                        <input type="checkbox"> C# <br>
+                        <input type="checkbox"> Java <br>
+                        <input type="checkbox"> SQL <br>
+                        <input type="checkbox"> HTML dan PHP
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pilihan Hari/Jam Kursus</td>
+                    <td>
+                        <select name="Jadwal">
+                            <option value="spagi">Senin - Rabu/09.00 - 11.00</option>
+                            <option value="spagi">Kamis - Sabtu/08.00 - 10.00</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="bawah">
+            Komentar Anda <br> 
+            <textarea></textarea> <br><br>
+            <input type="reset" value="Reset" name="Reset">
+            <input type="submit" value="Submit" name="Submit">
+            <input type="button" value="Cancel" name="Cancel">
+        </div>
     </body>
 </html>
