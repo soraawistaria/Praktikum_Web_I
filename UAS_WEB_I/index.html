@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Salon Floryn</title>
     <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,10 +55,19 @@
     </style>
 </head>
 <body>
+    <ul class="nav nav-underline p-2 pb-0">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Homepage</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="konfirm.html">List Booked</a>
+        </li>
+    </ul>
+    
     <header class="d-flex flex-column justify-content-center align-content-center text-center">
         <h1>SALON FLORYN</h1>
-        <p style="font-size: 30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, amet tempora fugiat minus alias ratione possimus accusamus earum, quaerat error ea nemo distinctio quas tenetur dicta et mollitia, voluptas maxime?</p>
-        <p><a href="#form" id="booking">Booking Now</a></p>
+        <p style="font-size: 30px;">Booking treatment untuk memanjakan Anda, kapan saja dan dimana saja. </p>
+        <p style="font-size: 24px;"><a href="#form" id="booking">Booking Now</a></p>
     </header>
 
     <main class="d-flex flex-wrap justify-content-center gap-3 my-4">
@@ -117,7 +126,7 @@
 
     <div id="form" class="formpesan">
         <h1 class="text-center" style="font-size: 40px;">FORM PEMESANAN</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit tempore neque, voluptate assumenda reprehenderit porro soluta. Optio tenetur sint aliquid nesciunt at ducimus molestias. Nostrum, mollitia! Cupiditate minima quam repudiandae?</p>
+        <p>Lengkapi form dan lakukan konfirmasi setelah melakukan pemesanan.</p>
         <form id="formReservasi" action="">
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama</label>
@@ -164,13 +173,9 @@
                 $('#jenis-treatment').val(idTreatment);
             });
 
-            let hariIni = new Date().toISOString().split('T')[0];
-            // Set atribut 'min' pada input tanggal supaya tanggal kemarin terkunci
-            $('#tanggal').attr('min', hariIni);
-
             //alert submit form
             $('#formReservasi').on('submit', function(e) {
-                e.preventDefault(); // Mencegah halaman reload otomatis saat submit
+                e.preventDefault(); 
 
                 let namaPelanggan = $('#nama').val();
                 let namaTreatment = $('#jenis-treatment option:selected').text();
@@ -182,7 +187,6 @@
                     return;
                 }
 
-                //alert
                 alert(
                     `✨ PESANAN BERHASIL DIBUAT! ✨\n\n` +
                     `Halo ${namaPelanggan},\n` +
@@ -190,11 +194,10 @@
                     `Sampai jumpa di salon! 🥰`
                 );
 
-                // Reset isi form setelah sukses submit
                 this.reset();
             });
         });
-    </script>
+    </script>   
 <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
